@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ajax based signup form infotuts">
+    <meta name="author" content="InfoTuts">
+    <link rel="stylesheet" type="text/css" href='/stylesheets/bootstrap.css' />
+    <link rel="stylesheet" type="text/css" href='/stylesheets/bootstrap-responsive.css' />
+    <!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> -->
+    <style type="text/css">
+    #footer {
+        margin-left: 400px;
+    }
+    </style>
+</head>
+<!-- <script src="/javascripts/jquery.js"></script> -->
+<!-- <script type="text/javascript" src="/javascripts/jquery.validate.js"></script> -->
+
+
+<body ng-app="myApp">
+    <div  class="container">
+        <div class="well" ng-controller="myCtrl">
+            <legend>Welcome :
+                <%- loggeduser %>
+            </legend>
+            <div class="span2 pull-right">
+                <a href="/logout">Logout</a>
+            </div>
+            <div class="control-group">
+                <a ng-click="goToOtherState()">Show List of all task</a>
+               
+            </div>
+            <ui-view></ui-view>
+        </div>
+    </div>
+    <div id="footer">
+        <h4> <a href="#">Task List</a></h4>
+    </div>
+
+<script data-require="angular.js@1.2.10" data-semver="1.2.10" src="https://code.angularjs.org/1.2.10/angular.min.js"></script><script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+<script src="/javascripts/main.js"></script>
+</body>
+
+</html> 

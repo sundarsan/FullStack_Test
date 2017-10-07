@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="well">
+        <form name="taskForm" id="signup" class="form-horizontal" method="post">
+            <legend>Task</legend>
+            <div class="control-group ">
+                <label class="control-label">Task Name</label>
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-user"></i></span>
+                        <input ng-model="tasklist.task" type="text" class="input-xlarge" id="task" name="task" placeholder="Task Name">
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">Priority</label>
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-user"></i></span>
+                        <input type="number" min="1" max="5" ng-model="tasklist.priority" class="input-xlarge" id="priority" name="priority" placeholder="Priority">
+                    </div>
+                    <span>Value should be 1-5</span>
+                </div>
+
+            </div>
+            <div class="control-group ">
+                <label class="control-label">Due Date</label>
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-user"></i></span>
+                        <input type="text" ng-model="tasklist.duedate" class="input-xlarge" id="duedate" name="duedate" placeholder="dd/mm/yyyy">
+                    </div>
+                    <span>Date format should be DD/MM/YYYY</span>
+                </div>
+
+            </div>
+            <div align="center">
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input01"></label>
+                <div class="controls">
+                    <button type="submit" ng-click="callTaskDetails(tasklist)" class="btn btn-success" rel="tooltip" title="Create My Account">Create Task</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="footer">
+    <h4><a href="#">Task List</a></h4>
+</div>
